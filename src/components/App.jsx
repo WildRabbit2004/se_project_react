@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "../blocks/app.css";
 import Header from "./Header";
-import Main from "./main";
+import Main from "./Main";
 import Footer from "./Footer";
 import ItemModal from "./ItemModal";
 import ModalWithForm from "./ModalWithForm";
@@ -98,6 +98,7 @@ function App() {
         <label className="modal__label">
           Name*
           <input
+            required
             className="modal__input"
             type="text"
             placeholder="Name"
@@ -110,6 +111,7 @@ function App() {
         >
           {`${newItemLink && !isValidUrl(newItemLink) ? "Image* (This is not a valid image link) " : "Image*"}`}
           <input
+            required
             className={`modal__input ${newItemLink && !isValidUrl(newItemLink) ? "modal__input-error" : ""}`}
             type="url"
             placeholder="Image URL"
@@ -123,6 +125,7 @@ function App() {
             className={`modal__label-radio ${newItemWeather === "hot" ? "modal__label-radio_checked" : ""}`}
           >
             <input
+              required
               type="radio"
               name="weather"
               value="hot"

@@ -22,10 +22,10 @@ export function filterWeatherData(data) {
   const isDay = currentTime > data.sys.sunrise && currentTime < data.sys.sunset;
 
   const getWeatherType = (weatherId) => {
-    if (weatherId >= 200 && weatherId <= 232) return "storm";
+    if (weatherId >= 200 && weatherId <= 232) return "stormy";
     if (weatherId >= 300 && weatherId <= 531) return "rainy";
-    if (weatherId >= 600 && weatherId <= 622) return "snow";
-    if (weatherId >= 701 && weatherId <= 781) return "fog";
+    if (weatherId >= 600 && weatherId <= 622) return "snowy";
+    if (weatherId >= 701 && weatherId <= 781) return "foggy";
     if (weatherId >= 800) return "sunny";
     return "cloudy";
   };
