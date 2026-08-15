@@ -78,14 +78,16 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Header city={weatherData.city} onAddClick={handleAddClick} />
-      <Main
-        weatherData={weatherData}
-        clothingItems={clothingItems}
-        onCardClick={handleCardClick}
-      />
-      <Footer />
+    <div className="page">
+      <div className="page__content">
+        <Header city={weatherData.city} onAddClick={handleAddClick} />
+        <Main
+          weatherData={weatherData}
+          clothingItems={clothingItems}
+          onCardClick={handleCardClick}
+        />
+        <Footer />
+      </div>
       <ModalWithForm
         title="New garment"
         name="add-clothing"
@@ -165,8 +167,8 @@ function App() {
         selectedCard={selectedCard}
         isOpen={activeModal === "preview"}
         onClose={handleCloseModal}
-      ></ItemModal>
-    </>
+      />
+    </div>
   );
 }
 

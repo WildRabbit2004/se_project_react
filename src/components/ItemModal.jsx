@@ -11,7 +11,7 @@ function ItemModal({ selectedCard, isOpen, onClose, name }) {
         className="modal__content modal__content_type_image"
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="modal__close" onClick={onClose}>
+        <button type="button" className="modal__close" onClick={onClose}>
           <img src={closeButton} alt="Close" />
         </button>
         <img
